@@ -1,0 +1,38 @@
+{
+    "name": "searchinput",
+    "title": "jQuery SearchInput",
+    "description": "jQuery plugin for magically turning the standard HTML text input field elements into fancy and usable HTML5 search input field elements.",
+    "keywords": [
+        "search",
+        "input",
+        "text",
+        "fancy",
+        "usable",
+        "html5"
+    ],
+    "version": "0.1.0",
+    "author": {
+        "name": "Glenn Dwiyatcita",
+        "url": "http://bit.ly/8glenn-gravatar"
+    },
+    "maintainers": [
+        {
+            "name": "Glenn Dwiyatcita",
+            "email": "glenn.dwiyatcita@rwth-aachen.de",
+            "url": "http://bit.ly/8glenn-gravatar"
+        }
+    ],
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/dwiyatci/jquery-searchinput/blob/0.1.0/MIT-LICENSE.md"
+        }
+    ],
+    "bugs": "https://github.com/dwiyatci/jquery-searchinput/issues",
+    "homepage": "https://github.com/dwiyatci/jquery-searchinput",
+    "docs": "https://github.com/dwiyatci/jquery-searchinput#readme",
+    "download": "https://github.com/dwiyatci/jquery-searchinput/archive/master.zip",
+    "dependencies": {
+        "jquery": ">=1.5"
+    }
+}
