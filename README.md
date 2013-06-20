@@ -2,7 +2,7 @@
 
 ![Screenshot image](http://i1128.photobucket.com/albums/m500/8glenn/jquery-searchinput/jquery-searchinput-screenshot.png "SearchInput screenshot")
 
-Yet another jQuery plugin that magically turning the standard HTML `input[type="text"]` elements into fancy and usable HTML5 `input[type="search"]` elements. View the demo here: **[Example](http://tiny.cc/jquery-searchinput-demo)**.
+Yet another jQuery plugin for magically turning the standard HTML `input[type="text"]` elements into fancy and usable HTML5 `input[type="search"]` elements. View the demo here: **[Example](http://tiny.cc/jquery-searchinput-demo)**.
 
 
 ## Set in Forty Licks
