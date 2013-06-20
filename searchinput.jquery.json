@@ -31,6 +31,7 @@
     "bugs": "https://github.com/dwiyatci/jquery-searchinput/issues",
     "homepage": "https://github.com/dwiyatci/jquery-searchinput",
     "docs": "https://github.com/dwiyatci/jquery-searchinput#readme",
+    "demo": "http://tiny.cc/jquery-searchinput-demo",
     "download": "https://github.com/dwiyatci/jquery-searchinput/archive/master.zip",
     "dependencies": {
         "jquery": ">=1.5"
