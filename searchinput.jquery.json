@@ -10,22 +10,22 @@
         "usable",
         "html5"
     ],
-    "version": "0.1.1",
+    "version": "0.1.2",
     "author": {
         "name": "Glenn Dwiyatcita",
-        "url": "http://bit.ly/8glenn-gravatar"
+        "url": "http://tiny.cc/dwiyatci"
     },
     "maintainers": [
         {
             "name": "Glenn Dwiyatcita",
             "email": "glenn.dwiyatcita@rwth-aachen.de",
-            "url": "http://bit.ly/8glenn-gravatar"
+            "url": "http://tiny.cc/dwiyatci"
         }
     ],
     "licenses": [
         {
             "type": "MIT",
-            "url": "https://github.com/dwiyatci/jquery-searchinput/blob/0.1.1/MIT-LICENSE.md"
+            "url": "https://github.com/dwiyatci/jquery-searchinput/blob/0.1.2/MIT-LICENSE.md"
         }
     ],
     "bugs": "https://github.com/dwiyatci/jquery-searchinput/issues",

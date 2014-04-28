@@ -35,10 +35,10 @@ oo $ $ "$      o$$$$$$$$$    $$$$$$$$$$$$$    $$$$$$$$$o       $$$o$$o$
                                 """"$$$$$$$$$$$
                                     $$$$$$$$$$$$
                                      $$$$$$$$$$"
-                                      "$$$""  
+                                      "$$$""
 </pre>
 
 
 ## Copyright and License
 
-The library is Copyright (c) 2013 Dwiyatci Inc., and distributed under the MIT License.
+The library is Copyright (c) 2013-2014 Dwiyatci Inc., and distributed under the MIT License.

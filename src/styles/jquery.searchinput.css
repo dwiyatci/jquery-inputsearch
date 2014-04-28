@@ -1,21 +1,21 @@
-/* 
+/*
     Document   : jquery.searchinput.css
     Created on : Jun 13, 2013, 12:33:21 AM
     Author     : Glenn
     Description:
-        Purpose of the stylesheet follows.
+        The stylesheet for jquery-searchinput.
 */
 
-.searchinput-icon-search { 
-    background: url("images/icon-search.png") no-repeat 0px 0px;
+.searchinput-icon-search {
+    background: url("images/icon-searchclear.png") no-repeat 0 0;
     position: absolute;
     width: 16px;
     height: 16px;
     z-index: 2000;
 }
 
-.searchinput-icon-clear { 
-    background: url("images/icon-clear.png") no-repeat 0px 0px;
+.searchinput-icon-clear {
+    background: url("images/icon-searchclear.png") no-repeat 0 -16px;
     position: absolute;
     width: 16px;
     height: 16px;
@@ -23,6 +23,6 @@
     z-index: 2000;
 }
 
-.searchinput-icon-clear:hover { 
-    background: url("images/icon-clear.png") no-repeat -16px 0px;
+.searchinput-icon-clear:hover {
+    background: url("images/icon-searchclear.png") no-repeat -16px -16px;
 }
