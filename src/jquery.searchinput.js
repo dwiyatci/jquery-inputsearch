@@ -4,10 +4,18 @@
 
 (function ($) {
 
-    $.fn.searchInput = function () {
+	// Mewsoft addition
+	$.fn.clearInput = function(options) {
+
+		var settings = $.extend({
+			'magnify' : false,
+		}, options);
+
         var ICON_WIDTH = 16
             , ICON_HEIGHT = 16
             , ICON_PADDING = 1;
+		
+		var clear_icon_class = settings.magnify ? 'clearinput-icon-search' : 'clearinput-icon-empty';
 
         var prepareIconHolder = function (inputEl) {
             var paddingTop = parseInt(inputEl.css('padding-top'))
@@ -39,8 +47,8 @@
         };
 
         var toggleSearchIcon = function (iconEl, isSearchIcon) {
-            iconEl.toggleClass('searchinput-icon-search', isSearchIcon)
-                .toggleClass('searchinput-icon-clear', !isSearchIcon);
+            iconEl.toggleClass(clear_icon_class, isSearchIcon)
+                .toggleClass('clearinput-icon-clear', !isSearchIcon);
         };
 
         var inputHandler = function (inputEl, iconEl) {
@@ -52,7 +60,7 @@
         };
 
         var iconClickHandler = function (inputEl, iconEl) {
-            if (iconEl.hasClass('searchinput-icon-clear')) {
+            if (iconEl.hasClass('clearinput-icon-clear')) {
                 inputEl.val('').focus();
                 toggleSearchIcon(iconEl, true);
             }
@@ -64,9 +72,9 @@
 
         return this.filter('input').each(function () {
             var inputEl = $(this);
-            var iconEl = $('<i>').addClass('searchinput-icon-search')
-                .addClass('searchinput-icon-clear')
-                .toggleClass('searchinput-icon-clear', false);
+            var iconEl = $('<i>').addClass(clear_icon_class)
+                .addClass('clearinput-icon-clear')
+                .toggleClass('clearinput-icon-clear', false);
 
             prepareIconHolder(inputEl);
             computeIconOffset(inputEl, iconEl);
@@ -75,7 +83,13 @@
             inputEl.on('input', function () {
                 inputHandler($(this), iconEl);
             });
-
+			//-------------------------
+            if ($(this).val().length > 0) {
+                toggleSearchIcon(iconEl, false);
+            } else {
+                toggleSearchIcon(iconEl, true);
+            }
+			//-------------------------
             iconEl.on('click', function () {
                 iconClickHandler(inputEl, $(this));
             });
@@ -83,7 +97,14 @@
             $(window).on('resize', function () {
                 resizeHandler(inputEl, iconEl);
             });
-
+			function nop() { }
+			if (!window.MutationObserver) {
+				window.MutationObserver = function () {
+					this.observe = nop;
+					this.disconnect = nop;
+				};
+			}
+			//-------------------------
             /*
              * Observer for watching display property change on the input element.
              */
