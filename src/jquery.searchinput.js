@@ -4,7 +4,14 @@
 
 (function ($) {
 
-    $.fn.searchInput = function () {
+	$.fn.searchInput = function(options) {
+
+		var settings = $.extend({
+			'magnify' : false,
+		}, options);
+		
+		var clear_icon_class = settings.magnify ? 'searchinput-icon-search' : 'searchinput-icon-empty';
+
         var ICON_WIDTH = 16
             , ICON_HEIGHT = 16
             , ICON_PADDING = 1;
@@ -39,7 +46,7 @@
         };
 
         var toggleSearchIcon = function (iconEl, isSearchIcon) {
-            iconEl.toggleClass('searchinput-icon-search', isSearchIcon)
+            iconEl.toggleClass(clear_icon_class, isSearchIcon)
                 .toggleClass('searchinput-icon-clear', !isSearchIcon);
         };
 
@@ -64,7 +71,7 @@
 
         return this.filter('input').each(function () {
             var inputEl = $(this);
-            var iconEl = $('<i>').addClass('searchinput-icon-search')
+            var iconEl = $('<i>').addClass(clear_icon_class)
                 .addClass('searchinput-icon-clear')
                 .toggleClass('searchinput-icon-clear', false);
 
@@ -76,6 +83,12 @@
                 inputHandler($(this), iconEl);
             });
 
+            if ($(this).val().length > 0) {
+                toggleSearchIcon(iconEl, false);
+            } else {
+                toggleSearchIcon(iconEl, true);
+            }
+
             iconEl.on('click', function () {
                 iconClickHandler(inputEl, $(this));
             });
@@ -83,6 +96,14 @@
             $(window).on('resize', function () {
                 resizeHandler(inputEl, iconEl);
             });
+
+			function nop() { }
+			if (!window.MutationObserver) {
+				window.MutationObserver = function () {
+					this.observe = nop;
+					this.disconnect = nop;
+				};
+			}
 
             /*
              * Observer for watching display property change on the input element.

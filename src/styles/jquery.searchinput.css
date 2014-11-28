@@ -14,6 +14,14 @@
     z-index: 2000;
 }
 
+.searchinput-icon-empty {
+    background: url("images/icon-clearinput.png") no-repeat -100 -100; /* hide */
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    z-index: 2000;
+}
+
 .searchinput-icon-clear {
     background: url("images/icon-searchclear.png") no-repeat 0 -16px;
     position: absolute;

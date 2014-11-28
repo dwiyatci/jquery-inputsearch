@@ -5,19 +5,29 @@
     <title>jQuery SearchInput Demo</title>
 
     <link rel="stylesheet" type="text/css"
-          href="dist/styles/jquery.searchinput.min.css"/>
+          href="src/styles/jquery.searchinput.css"/>
 
-    <script src="//code.jquery.com/jquery-latest.js"></script>
-    <script src="dist/jquery.searchinput.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="src/jquery.searchinput.js"></script>
+    <style>
+        /* disable clear button in Internet Explorer 10 'x' */
+        input[type=text]::-ms-clear {display: none;}
+    </style>
 </head>
 <body>
+
 <div style="margin:4px;padding:4px;">
-    <input type="text" id="input" placeholder="Search" />
+    <input type="text" id="input" value="" placeholder="Search" /> <br>
+    <input type="text" id="input1" value="default text" placeholder="Search" /> <br>
+
+    <input type="text" id="input2" value="" /> <br>
+    <input type="text" id="input3" value="default text" /> <br>
 </div>
 
 <script>
     $(function () {
-        $('#input').searchInput();
+        $('#input, #input1').searchInput({'magnify' : true});
+        $('#input2, #input3').searchInput({'magnify' : false});
     });
 </script>
 </body>
