@@ -4,7 +4,13 @@
 
 (function ($) {
 
-    $.fn.searchInput = function () {
+    $.fn.searchInput = function (options) {
+        var defaults = {
+            clearSearch: null
+        };
+
+        var settings = $.extend({}, defaults, options);
+
         var ICON_WIDTH = 16
             , ICON_HEIGHT = 16
             , ICON_PADDING = 1;
@@ -55,6 +61,10 @@
             if (iconEl.hasClass('searchinput-icon-clear')) {
                 inputEl.val('').focus();
                 toggleSearchIcon(iconEl, true);
+
+                if (typeof settings.clearSearch == 'function') {
+                    settings.clearSearch.call(this);
+                }
             }
         };
 
