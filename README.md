@@ -22,7 +22,7 @@ included,
 - minimalist and consistent because it uses Base64-encoded `search` and 
 `circle-close (cross)` icons of jQuery UI.
 
-### Demo
+## Demo
 You can see the plugin in action at [JSFiddle](http://jsfiddle.net/glenn/eP7TZ/).
 
 ## Installation
@@ -33,13 +33,13 @@ Install jQuery InputSearch plugin via the command line with npm:
 $ npm intall jquery-inputsearch
 ```
 
-Or simply by downloading it [here](https://raw.githubusercontent.com/dwiyatci/jquery-inputsearch/master/dist/jquery-inputsearch.min.js).
+Or simply by downloading it [here](https://raw.githubusercontent.com/dwiyatci/jquery-inputsearch/master/dist/jquery.inputsearch.min.js).
 
 Add the script to your page after adding jQuery:
 
 ```html
 <script src="//code.jquery.com/jquery-latest.js"></script>
-<script src="PATH/TO/jquery.inputsearch.js"></script>
+<script src="PATH/TO/jquery.inputsearch.min.js"></script>
 ```
 
 ## Usage
