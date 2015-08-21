@@ -1,20 +1,38 @@
 {
-    "name": "jquery-searchinput",
-    "version": "0.1.2",
-    "author": {
-        "name": "Glenn Dwiyatcita",
-        "email": "glenn.dwiyatcita@rwth-aachen.de"
-    },
-    "description": "jQuery plugin for magically turning the standard HTML text input field elements into fancy and usable HTML5 search input field elements.",
-    "devDependencies": {
-        "grunt": "~0.4.2",
-        "grunt-contrib-jshint": "~0.10.0",
-        "grunt-contrib-uglify": "~0.4.0",
-        "grunt-contrib-cssmin": "~0.8.0",
-        "grunt-contrib-copy": "~0.5.0"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/dwiyatci/jquery-searchinput"
-    }
+  "name"           : "jquery-inputsearch",
+  "version"        : "0.2.0",
+  "description"    : "jQuery plugin for automagically transforming input[type=\"text\"] elements into input[type=\"search\"]-like elements.",
+  "keywords"       : [
+    "jquery-plugin",
+    "ecosystem:jquery",
+    "input",
+    "input-text",
+    "input-search",
+    "inputsearch",
+    "searchinput",
+    "html5-element"
+  ],
+  "homepage"       : "https://github.com/dwiyatci/jquery-inputsearch",
+  "bugs"           : {
+    "url"  : "https://github.com/dwiyatci/jquery-inputsearch/issues",
+    "email": "dwiyatci@mail.com",
+    "url"  : "http://tiny.cc/dwiyatci"
+  },
+  "license"        : "SEE LICENSE IN WTFPL-LICENSE.txt",
+  "author"         : {
+    "name" : "Glenn Dwiyatcita",
+    "email": "dwiyatci@mail.com"
+  },
+  "dependencies"   : {
+    "jquery": "*"
+  },
+  "devDependencies": {
+    "grunt"               : "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-uglify": "*"
+  },
+  "repository"     : {
+    "type": "git",
+    "url" : "https://github.com/dwiyatci/jquery-inputsearch"
+  }
 }

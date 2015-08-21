@@ -1,44 +1,81 @@
-# jquery-searchinput
+# jquery-inputsearch.js
 
-![Screenshot image](http://i1128.photobucket.com/albums/m500/8glenn/jquery-searchinput/jquery-searchinput-screenshot.png "SearchInput screenshot")
+jQuery plugin for automagically transforming `input[type="text"]` elements into 
+`input[type="search"]`-like elements.
 
-Yet another jQuery plugin for magically turning the standard HTML `input[type="text"]` elements into fancy and usable HTML5 `input[type="search"]` elements. View the demo here: **[Example](http://tiny.cc/jquery-searchinput-demo)**.
+I started to write this plugin back in 2013, contending other solutions to this 
+[issue](http://stackoverflow.com/questions/6258521) in SO, right before I did 
+some crazy [CouchSurfing](https://www.couchsurfing.com/) to Stockholm, Sweden.
 
+### Why?
+There are a couple of highly upvoted answers in that thread (with some jQuery 
+plugins written corresponds to them), but I was interested in writing my own 
+because none of them uses [jQuery UI icons](http://api.jqueryui.com/theming/icons/).
 
-## Set in Forty Licks
+Things have pretty much changed (annually) since then. :bowtie:
 
-This section is supposed to be a joke.
+Now, the plugin is:
 
-<pre>
-                          oooo$$$$$$$$$$$$oooo
-                      oo$$$$$$$$$$$$$$$$$$$$$$$$o
-                   oo$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$o         o$   $$ o$
-   o $ oo        o$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$o       $$ $$ $$o$
-oo $ $ "$      o$$$$$$$$$    $$$$$$$$$$$$$    $$$$$$$$$o       $$$o$$o$
-"$$$$$$o$     o$$$$$$$$$      $$$$$$$$$$$      $$$$$$$$$$o    $$$$$$$$
-  $$$$$$$    $$$$$$$$$$$      $$$$$$$$$$$      $$$$$$$$$$$$$$$$$$$$$$$
-  $$$$$$$$$$$$$$$$$$$$$$$    $$$$$$$$$$$$$    $$$$$$$$$$$$$$  """$$$
-   "$$$""""$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$     "$$$
-    $$$   o$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$     "$$$o
-   o$$"   $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$       $$$o
-   $$$    $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$" "$$$$$$ooooo$$$$o
-  o$$$oooo$$$$$  $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$   o$$$$$$$$$$$$$$$$$
-  $$$$$$$$"$$$$   $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$     $$$$""""""""
- """"       $$$$    "$$$$$$$$$$$$$$$$$$$$$$$$$$$$"      o$$$
-            "$$$o     """$$$$$$$$$$$$$$$$$$"$$"         $$$
-              $$$o          "$$""$$$$$$""""           o$$$
-               $$$$o                                o$$$"
-                "$$$$o      o$$$$$$o"$$$$o        o$$$$
-                  "$$$$$oo     ""$$$$o$$$$$o   o$$$$""
-                     ""$$$$$oooo  "$$$o$$$$$$$$$"""
-                        ""$$$$$$$oo $$$$$$$$$$
-                                """"$$$$$$$$$$$
-                                    $$$$$$$$$$$$
-                                     $$$$$$$$$$"
-                                      "$$$""
-</pre>
+- lightweight (~3 KB uglified, ~7 KB unuglified),
+- straight-forward; not requiring any CSS or images files to be 
+included,
+- minimalist and consistent because it uses Base64-encoded `search` and 
+`circle-close (cross)` icons of jQuery UI.
 
+### Demo
+You can see the plugin in action at [JSFiddle](http://jsfiddle.net/glenn/eP7TZ/).
 
-## Copyright and License
+## Installation
 
-The library is Copyright (c) 2013-2014 Dwiyatci Inc., and distributed under the MIT License.
+Install jQuery InputSearch plugin via the command line with npm:
+
+```bash
+$ npm intall jquery-inputsearch
+```
+
+Or simply by downloading it [here](https://raw.githubusercontent.com/dwiyatci/jquery-inputsearch/master/dist/jquery-inputsearch.min.js).
+
+Add the script to your page after adding jQuery:
+
+```html
+<script src="//code.jquery.com/jquery-latest.js"></script>
+<script src="PATH/TO/jquery.inputsearch.js"></script>
+```
+
+## Usage
+
+### Basic example
+
+```javascript
+$('input').inputSearch();
+```
+
+### Options
+
+#### searchIconVisible (default: `true`)
+
+Type: `Boolean`
+
+A boolean value to determine whether the search icon should be visible or not.
+
+#### onClear
+
+Type: `Function`
+
+An event callback handler when the clear icon is clicked.
+
+```javascript
+$('input').inputSearch({
+    onClear: function () {
+        console.log('Kulo Kroso Bejo');
+    }
+});
+```
+
+## Author
+Glenn Dwiyatcita ([@dwiyatci](http://tiny.cc/dwiyatci))
+
+## License
+See [WTFPL-LICENSE.txt](https://raw.github.com/dwiyatci/jquery-inputsearch/master/WTFPL-LICENSE.txt). 
+
+![WTFPL](http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-1.png)

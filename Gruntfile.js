@@ -5,59 +5,32 @@
 module.exports = function (grunt) {
 
     grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json'),
+        pkg   : grunt.file.readJSON('package.json'),
         jshint: {
-            files: ['Gruntfile.js', 'src/**/*.js'],
-            options: {
-                // options here to override JSHint defaults
-                globals: {
-                    jQuery: true,
-                    console: true,
-                    module: true,
-                    document: true
-                },
-                laxcomma: true
-            }
+            files: ['gruntfile.js', 'src/**/*.js']
         },
         uglify: {
             options: {
-                banner: '/*! <%= pkg.name %> v<%= pkg.version %> by <%= pkg.author.name %> - <%= grunt.template.today("dd-mm-yyyy") %> */\n'
-            },
-            dist: {
-                files: {
-                    'dist/jquery.searchinput.min.js': ['src/jquery.searchinput.js']
+                banner  : '/*! <%= pkg.name %> v<%= pkg.version %> by <%= pkg.author.name %> - <%= grunt.template.today("dd-mm-yyyy") %> */\n',
+                /**
+                 *
+                 * @see https://github.com/mishoo/UglifyJS2#compressor-options
+                 */
+                compress: {
+                    drop_console: true,
+                    dead_code   : true
                 }
-            }
-        },
-        cssmin: {
-            options: {
-                banner: '/*! <%= pkg.name %> v<%= pkg.version %> by <%= pkg.author.name %> - <%= grunt.template.today("dd-mm-yyyy") %> */\n'
             },
-            dist: {
+            dist   : {
                 files: {
-                    'dist/styles/jquery.searchinput.min.css': ['src/styles/jquery.searchinput.css']
+                    'dist/jquery.inputsearch.min.js': ['src/jquery.inputsearch.js']
                 }
-            }
-        },
-        copy: {
-            dist: {
-                files: [
-                    {
-                        expand: true,
-                        cwd: 'src/',
-                        src: ['styles/images/icon-searchclear.png'],
-                        dest: 'dist/'
-                    }
-                ]
             }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-copy');
 
-    grunt.registerTask('default', ['jshint', 'uglify', 'cssmin', 'copy']);
-
+    grunt.registerTask('default', ['jshint', 'uglify']);
 };

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>jQuery InputSearch Demo</title>
+
+    <style>
+        .container {
+            margin: 8px;
+        }
+
+        .row {
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <input type="text" placeholder="Search" />
+    </div>
+    <div class="row">
+        <input type="text" class="input-search" id="is1" placeholder="Search" />
+    </div>
+    <div class="row">
+        <input type="text" class="input-search" id="is2" placeholder="Search" />
+    </div>
+</div>
+<div class="container">
+    <button class="test">Toggle visibility</button>
+</div>
+<script src="//code.jquery.com/jquery-latest.js"></script>
+<script src="src/jquery.inputsearch.js"></script>
+
+<script>
+    $(function () {
+        $('#is1').inputSearch({
+            searchIconVisible: false
+        });
+
+        $('#is2').inputSearch({
+            onClear: function () {
+                console.log('@onClear');
+            }
+        });
+
+        $('.test').on('click', function () {
+            $('.input-search').toggle();
+        });
+    });
+</script>
+</body>
+</html>
