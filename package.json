@@ -1,8 +1,8 @@
 {
-  "name"           : "jquery-inputsearch",
-  "version"        : "0.2.0",
-  "description"    : "jQuery plugin for automagically transforming input[type=\"text\"] elements into input[type=\"search\"]-like elements.",
-  "keywords"       : [
+  "name": "jquery-inputsearch",
+  "version": "0.2.1",
+  "description": "jQuery plugin for automagically transforming input[type=\"text\"] elements into input[type=\"search\"]-like elements.",
+  "keywords": [
     "jquery-plugin",
     "ecosystem:jquery",
     "input",
@@ -12,27 +12,27 @@
     "searchinput",
     "html5-element"
   ],
-  "homepage"       : "https://github.com/dwiyatci/jquery-inputsearch",
-  "bugs"           : {
-    "url"  : "https://github.com/dwiyatci/jquery-inputsearch/issues",
+  "homepage": "https://github.com/dwiyatci/jquery-inputsearch",
+  "bugs": {
+    "url": "https://github.com/dwiyatci/jquery-inputsearch/issues",
     "email": "dwiyatci@mail.com"
   },
-  "license"        : "WTFPL",
-  "author"         : {
-    "name" : "Glenn Dwiyatcita",
+  "license": "WTFPL",
+  "author": {
+    "name": "Glenn Dwiyatcita",
     "email": "dwiyatci@mail.com",
-    "url"  : "http://tiny.cc/dwiyatci"
+    "url": "http://tiny.cc/dwiyatci"
   },
-  "dependencies"   : {
+  "dependencies": {
     "jquery": "*"
   },
   "devDependencies": {
-    "grunt"               : "*",
+    "grunt": "*",
     "grunt-contrib-jshint": "*",
     "grunt-contrib-uglify": "*"
   },
-  "repository"     : {
+  "repository": {
     "type": "git",
-    "url" : "https://github.com/dwiyatci/jquery-inputsearch"
+    "url": "https://github.com/dwiyatci/jquery-inputsearch"
   }
 }
