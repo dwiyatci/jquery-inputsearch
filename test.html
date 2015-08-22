@@ -10,7 +10,7 @@
         }
 
         .row {
-            margin-bottom: 4px;
+            margin-bottom: 8px;
         }
     </style>
 </head>
@@ -20,10 +20,10 @@
         <input type="text" placeholder="Search" />
     </div>
     <div class="row">
-        <input type="text" class="input-search" id="is1" placeholder="Search" />
+        <input type="text" class="input-search" id="input1" placeholder="Search" />
     </div>
     <div class="row">
-        <input type="text" class="input-search" id="is2" placeholder="Search" />
+        <input type="text" class="input-search" id="input2" placeholder="Search" />
     </div>
 </div>
 <div class="container">
@@ -34,11 +34,11 @@
 
 <script>
     $(function () {
-        $('#is1').inputSearch({
+        $('#input1').inputSearch({
             searchIconVisible: false
         });
 
-        $('#is2').inputSearch({
+        $('#input2').inputSearch({
             onClear: function () {
                 console.log('@onClear');
             }

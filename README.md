@@ -3,6 +3,8 @@
 jQuery plugin for automagically transforming `input[type="text"]` elements into 
 `input[type="search"]`-like elements.
 
+![jQuery InputSearch sneak peek](imgs/jis-sneakpeek.png)
+
 I started to write this plugin back in 2013, contending other solutions to this 
 [issue](http://stackoverflow.com/questions/6258521) in SO, right before I did 
 some crazy [CouchSurfing](https://www.couchsurfing.com/) to Stockholm, Sweden.
@@ -76,6 +78,8 @@ $('input').inputSearch({
 Glenn Dwiyatcita ([@dwiyatci](http://tiny.cc/dwiyatci))
 
 ## License
+WTFPL – Do What the Fuck You Want to Public License.
+
 See [WTFPL-LICENSE.txt](https://raw.github.com/dwiyatci/jquery-inputsearch/master/WTFPL-LICENSE.txt). 
 
 ![WTFPL](http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-1.png)
