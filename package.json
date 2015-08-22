@@ -15,13 +15,13 @@
   "homepage"       : "https://github.com/dwiyatci/jquery-inputsearch",
   "bugs"           : {
     "url"  : "https://github.com/dwiyatci/jquery-inputsearch/issues",
-    "email": "dwiyatci@mail.com",
-    "url"  : "http://tiny.cc/dwiyatci"
+    "email": "dwiyatci@mail.com"
   },
   "license"        : "WTFPL",
   "author"         : {
     "name" : "Glenn Dwiyatcita",
-    "email": "dwiyatci@mail.com"
+    "email": "dwiyatci@mail.com",
+    "url"  : "http://tiny.cc/dwiyatci"
   },
   "dependencies"   : {
     "jquery": "*"
