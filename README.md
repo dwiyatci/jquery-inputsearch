@@ -3,7 +3,7 @@
 jQuery plugin for automagically transforming `input[type="text"]` elements into 
 `input[type="search"]`-like elements.
 
-![jQuery InputSearch sneak peek](imgs/jis-sneakpeek.png)
+![jQuery InputSearch sneak peek](img/jqis-sneakpeek.png)
 
 I started to write this plugin back in 2013, contending other solutions to this 
 [issue](http://stackoverflow.com/questions/6258521) in SO, right before I did 
@@ -60,7 +60,7 @@ Type: `Boolean`
 
 A boolean value to determine whether the search icon should be visible or not.
 
-#### onClear
+#### onClear (default: `$.noop`)
 
 Type: `Function`
 
@@ -69,7 +69,9 @@ An event callback handler when the clear icon is clicked.
 ```javascript
 $('input').inputSearch({
     onClear: function () {
-        console.log('Kulo Kroso Bejo');
+        
+        // Life, Universe, and Everything
+        console.log('number 42');
     }
 });
 ```
@@ -78,8 +80,8 @@ $('input').inputSearch({
 Glenn Dwiyatcita ([@dwiyatci](http://tiny.cc/dwiyatci))
 
 ## License
-WTFPL – Do What the Fuck You Want to Public License.
+WTFPL â€“ Do What the Fuck You Want to Public License.
 
-See [WTFPL-LICENSE.txt](https://raw.github.com/dwiyatci/jquery-inputsearch/master/WTFPL-LICENSE.txt). 
+See [LICENSE.txt](https://raw.github.com/dwiyatci/jquery-inputsearch/master/LICENSE.txt). 
 
 ![WTFPL](http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-1.png)

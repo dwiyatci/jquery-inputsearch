@@ -1,8 +1,9 @@
 {
-  "name": "jquery-inputsearch",
-  "version": "0.2.1",
-  "description": "jQuery plugin for automagically transforming input[type=\"text\"] elements into input[type=\"search\"]-like elements.",
-  "keywords": [
+  "name"           : "jquery-inputsearch",
+  "version"        : "0.3.0",
+  "description"    : "jQuery plugin for automagically transforming input[type=\"text\"] elements into input[type=\"search\"]-like elements.",
+  "main"           : "dist/jquery.inputsearch.min.js",
+  "keywords"       : [
     "jquery-plugin",
     "ecosystem:jquery",
     "input",
@@ -12,27 +13,45 @@
     "searchinput",
     "html5-element"
   ],
-  "homepage": "https://github.com/dwiyatci/jquery-inputsearch",
-  "bugs": {
-    "url": "https://github.com/dwiyatci/jquery-inputsearch/issues",
+  "homepage"       : "https://github.com/dwiyatci/jquery-inputsearch",
+  "bugs"           : {
+    "url"  : "https://github.com/dwiyatci/jquery-inputsearch/issues",
     "email": "dwiyatci@mail.com"
   },
-  "license": "WTFPL",
-  "author": {
-    "name": "Glenn Dwiyatcita",
+  "license"        : "SEE LICENSE IN LICENSE.txt",
+  "author"         : {
+    "name" : "Glenn Dwiyatcita",
     "email": "dwiyatci@mail.com",
-    "url": "http://tiny.cc/dwiyatci"
+    "url"  : "http://tiny.cc/dwiyatci"
   },
-  "dependencies": {
-    "jquery": "*"
+  "dependencies"   : {
+    "jquery": "2.2.2"
   },
   "devDependencies": {
-    "grunt": "*",
-    "grunt-contrib-jshint": "*",
-    "grunt-contrib-uglify": "*"
+    "babel-loader"        : "6.2.4",
+    "babel-polyfill"      : "6.7.4",
+    "babel-preset-es2015" : "6.6.0",
+    "babel-preset-stage-2": "6.5.0",
+    "jscs"                : "2.11.0",
+    "rimraf"              : "2.5.2",
+    "updtr"               : "0.1.10",
+    "webpack"             : "1.12.14",
+    "webpack-dev-server"  : "1.14.1"
   },
-  "repository": {
+  "scripts"        : {
+    "setup"        : "npm install rimraf updtr webpack webpack-dev-server jscs -g",
+    "install:clean": "rimraf node_modules && npm install",
+    "clean"        : "rimraf dist",
+    "webpack"      : "webpack",
+    "watch"        : "webpack -w",
+    "start"        : "webpack-dev-server --inline --hot",
+    "jscs"         : "jscs src",
+    "build"        : "npm run jscs && npm run clean && webpack",
+    "update"       : "updtr",
+    "update:global": "npm run setup"
+  },
+  "repository"     : {
     "type": "git",
-    "url": "https://github.com/dwiyatci/jquery-inputsearch"
+    "url" : "https://github.com/dwiyatci/jquery-inputsearch"
   }
 }
