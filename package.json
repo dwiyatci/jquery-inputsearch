@@ -19,7 +19,7 @@
   "author": "Glenn Dwiyatcita <dwiyatci@mail.com> (https://tiny.cc/dwiyatci)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dwiyatci/harlemshakify.git"
+    "url": "https://github.com/dwiyatci/jquery-inputsearch.git"
   },
   "scripts": {
     "install:clean": "yarn upgrade || yarn install",
