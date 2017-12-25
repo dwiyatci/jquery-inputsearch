@@ -3,7 +3,7 @@
 jQuery plugin for automagically transforming `input[type="text"]` elements into 
 `input[type="search"]`-like elements.
 
-![jQuery InputSearch sneak peek](img/jqis-sneakpeek.png)
+![jQuery InputSearch screenshot](img/screenshot.png)
 
 I started to write this plugin back in 2013, contending other solutions to this 
 [issue](http://stackoverflow.com/questions/6258521) in SO, right before I did 
@@ -68,11 +68,10 @@ An event callback handler when the clear icon is clicked.
 
 ```javascript
 $('input').inputSearch({
-    onClear: function () {
-        
-        // Life, Universe, and Everything
-        console.log('number 42');
-    }
+  onClear() {
+    // Life, Universe, and Everything
+    console.log('number 42');
+  }
 });
 ```
 

@@ -1,42 +1,41 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
+  <head lang="en">
+    <meta charset="UTF-8" >
     <title>jQuery InputSearch Demo</title>
-</head>
-<body>
-<div id="demo">
-    <div class="container">
+  </head>
+  <body>
+    <div id="demo">
+      <div class="container">
         <style scoped>
-            .container {
-                margin: .4em 0;
-            }
+          .container {
+            margin: .4em 0;
+          }
         </style>
         <input placeholder="Search" />
         <input class="input-search input-a" placeholder="Search" />
         <input class="input-search input-b" placeholder="Search" />
+      </div>
+      <button class="visibility-toggler">Toggle visibility</button>
     </div>
-    <button class="visibility-toggler">Toggle visibility</button>
-</div>
 
-<script src="//code.jquery.com/jquery-latest.js"></script>
-<script src="dist/jquery.inputsearch.min.js"></script>
-<script>
-    $(function () {
+    <script src="//code.jquery.com/jquery-latest.js"></script>
+    <script src="dist/jquery.inputsearch.js"></script>
+    <script>
+      $(function () {
         $('.input-a').inputSearch({
-            searchIconVisible: false,
+          searchIconVisible: false,
         });
 
         $('.input-b').inputSearch({
-            onClear: function onClear() {
-                console.log('@onClear');
-            },
+          onClear() {
+            console.log('@onClear');
+          },
         });
 
-        $('.visibility-toggler').on('click', function onClick() {
-            $('.input-search').toggle();
-        });
-    });
-</script>
-</body>
+        const inputSearch = $('.input-search');
+        $('.visibility-toggler').on('click', inputSearch.toggle.bind(inputSearch));
+      });
+    </script>
+  </body>
 </html>

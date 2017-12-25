@@ -1,0 +1,10 @@
+---
+env:
+  browser: true
+  jquery: true
+extends: airbnb-base
+rules:
+  no-use-before-define: off
+  no-param-reassign:
+  - error
+  - props: false

@@ -1,9 +1,8 @@
 {
-  "name"           : "jquery-inputsearch",
-  "version"        : "0.3.0",
-  "description"    : "jQuery plugin for automagically transforming input[type=\"text\"] elements into input[type=\"search\"]-like elements.",
-  "main"           : "dist/jquery.inputsearch.min.js",
-  "keywords"       : [
+  "name": "jquery-inputsearch",
+  "version": "0.3.0",
+  "description": "jQuery plugin for automagically transforming input[type=\"text\"] elements into input[type=\"search\"]-like elements.",
+  "keywords": [
     "jquery-plugin",
     "ecosystem:jquery",
     "input",
@@ -13,45 +12,31 @@
     "searchinput",
     "html5-element"
   ],
-  "homepage"       : "https://github.com/dwiyatci/jquery-inputsearch",
-  "bugs"           : {
-    "url"  : "https://github.com/dwiyatci/jquery-inputsearch/issues",
-    "email": "dwiyatci@mail.com"
+  "homepage": "https://github.com/dwiyatci/jquery-inputsearch",
+  "bugs": "https://github.com/dwiyatci/jquery-inputsearch/issues",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "main": "dist/jquery.inputsearch.js",
+  "author": "Glenn Dwiyatcita <dwiyatci@mail.com> (https://tiny.cc/dwiyatci)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dwiyatci/harlemshakify.git"
   },
-  "license"        : "SEE LICENSE IN LICENSE.txt",
-  "author"         : {
-    "name" : "Glenn Dwiyatcita",
-    "email": "dwiyatci@mail.com",
-    "url"  : "http://tiny.cc/dwiyatci"
+  "scripts": {
+    "install:clean": "yarn upgrade || yarn install",
+    "update": "yarn upgrade-interactive --latest",
+    "lint": "eslint --cache src",
+    "build": "parcel build src/jquery.inputsearch.js"
   },
-  "dependencies"   : {
-    "jquery": "2.2.2"
+  "dependencies": {
+    "jquery": "3.2.1"
   },
   "devDependencies": {
-    "babel-loader"        : "6.2.4",
-    "babel-polyfill"      : "6.7.4",
-    "babel-preset-es2015" : "6.6.0",
-    "babel-preset-stage-2": "6.5.0",
-    "jscs"                : "2.11.0",
-    "rimraf"              : "2.5.2",
-    "updtr"               : "0.1.10",
-    "webpack"             : "1.12.14",
-    "webpack-dev-server"  : "1.14.1"
-  },
-  "scripts"        : {
-    "setup"        : "npm install rimraf updtr webpack webpack-dev-server jscs -g",
-    "install:clean": "rimraf node_modules && npm install",
-    "clean"        : "rimraf dist",
-    "webpack"      : "webpack",
-    "watch"        : "webpack -w",
-    "start"        : "webpack-dev-server --inline --hot",
-    "jscs"         : "jscs src",
-    "build"        : "npm run jscs && npm run clean && webpack",
-    "update"       : "updtr",
-    "update:global": "npm run setup"
-  },
-  "repository"     : {
-    "type": "git",
-    "url" : "https://github.com/dwiyatci/jquery-inputsearch"
+    "babel-core": "6.26.0",
+    "babel-plugin-transform-object-rest-spread": "6.26.0",
+    "babel-preset-env": "1.6.1",
+    "eslint": "4.14.0",
+    "eslint-config-airbnb-base": "12.1.0",
+    "eslint-plugin-import": "2.8.0",
+    "parcel-bundler": "1.3.1"
   }
 }
