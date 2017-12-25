@@ -1,5 +1,9 @@
 # jquery-inputsearch.js
 
+[![version](https://img.shields.io/npm/v/jquery-inputsearch.svg)](https://www.npmjs.com/package/jquery-inputsearch)
+[![downloads](https://img.shields.io/npm/dt/jquery-inputsearch.svg)](http://npm-stat.com/charts.html?package=jquery-inputsearch)
+[![WTFPL License](https://img.shields.io/badge/license-WTFPL-red.svg)](https://raw.githubusercontent.com/dwiyatci/jquery-inputsearch/master/LICENSE.txt)
+
 jQuery plugin for automagically transforming `input[type="text"]` elements into 
 `input[type="search"]`-like elements.
 

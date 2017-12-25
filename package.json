@@ -1,7 +1,7 @@
 {
   "name": "jquery-inputsearch",
   "version": "1.0.0",
-  "description": "jQuery plugin for automagically transforming input[type=\"text\"] elements into input[type=\"search\"]-like elements.",
+  "description": "jQuery plugin for automagically transforming input[type=\"text\"] elements into input[type=\"search\"]-like elements",
   "keywords": [
     "jquery-plugin",
     "ecosystem:jquery",
